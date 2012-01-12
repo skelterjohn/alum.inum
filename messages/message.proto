@@ -1,0 +1,14 @@
+
+package messages;
+
+message XItem {
+	required string Label = 1;
+	required bytes Data = 2;
+}
+
+message XMessage {
+  required string Project = 1;
+  repeated XItem Payload = 2;
+  required bool Broadcast = 3;
+  repeated string Signatures = 4;
+}
